@@ -1,0 +1,16 @@
+<div class="container" (mousemove)="move($event)" (mousedown)="down($event)" (mouseup)="drawing=false"
+  (window:resize)="resizeCanvas()" (touchstart)="touch($event)">
+  <div class="buttons" (click)="clearDrawing()" *ngIf="dirtyCanvas">
+    <div class="cntr">
+        <a class="btn effect01"><span>Clear Drawing</span></a>
+    </div>
+  </div>
+  <div class="infoPos" title="Click &amp; drag anywhere in the background to Draw!">
+    <div class="cntr">
+        <a class="btn effect01"><span>i</span></a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <canvas id="canvas"></canvas>
+
+</div>
